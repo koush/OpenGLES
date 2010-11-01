@@ -365,439 +365,441 @@ namespace OpenGLES
         public const int GL_OES_point_size_array = 1;
         public const int GL_OES_point_sprite = 1;
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glAlphaFunc")]
+        public const string LIBGLES_CM = "libGLESv1_CM.so";
+
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glAlphaFunc")]
         public static extern void AlphaFunc(uint func, float @ref);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glClearColor")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glClearColor")]
         public static extern void ClearColor(float red, float green, float blue, float alpha);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glClearDepthf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glClearDepthf")]
         public static extern void ClearDepthf(float depth);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glClipPlanef")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glClipPlanef")]
         unsafe public static extern void ClipPlanef(uint plane, float* equation);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glColor4f")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glColor4f")]
         public static extern void Color4f(float red, float green, float blue, float alpha);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDepthRangef")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDepthRangef")]
         public static extern void DepthRangef(float zNear, float zFar);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glFogf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glFogf")]
         public static extern void Fogf(uint pname, float param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glFogfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glFogfv")]
         unsafe public static extern void Fogfv(uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glFrustumf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glFrustumf")]
         public static extern void Frustumf(float left, float right, float bottom, float top, float zNear, float zFar);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetFloatv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetFloatv")]
         unsafe public static extern void GetFloatv(uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetLightfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetLightfv")]
         unsafe public static extern void GetLightfv(uint light, uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetMaterialfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetMaterialfv")]
         unsafe public static extern void GetMaterialfv(uint face, uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetTexEnvfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetTexEnvfv")]
         unsafe public static extern void GetTexEnvfv(uint env, uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetTexParameterfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetTexParameterfv")]
         unsafe public static extern void GetTexParameterfv(uint target, uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLightModelf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLightModelf")]
         public static extern void LightModelf(uint pname, float param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLightModelfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLightModelfv")]
         unsafe public static extern void LightModelfv(uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLightf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLightf")]
         public static extern void Lightf(uint light, uint pname, float param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLightfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLightfv")]
         unsafe public static extern void Lightfv(uint light, uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLineWidth")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLineWidth")]
         public static extern void LineWidth(float width);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLoadMatrixf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLoadMatrixf")]
         unsafe public static extern void LoadMatrixf(float* m);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glMaterialf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glMaterialf")]
         public static extern void Materialf(uint face, uint pname, float param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glMaterialfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glMaterialfv")]
         unsafe public static extern void Materialfv(uint face, uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glMultMatrixf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glMultMatrixf")]
         unsafe public static extern void MultMatrixf(float* m);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glMultiTexCoord4f")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glMultiTexCoord4f")]
         public static extern void MultiTexCoord4f(uint target, float s, float t, float r, float q);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glNormal3f")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glNormal3f")]
         public static extern void Normal3f(float nx, float ny, float nz);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glOrthof")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glOrthof")]
         public static extern void Orthof(float left, float right, float bottom, float top, float zNear, float zFar);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPointParameterf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPointParameterf")]
         public static extern void PointParameterf(uint pname, float param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPointParameterfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPointParameterfv")]
         unsafe public static extern void PointParameterfv(uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPointSize")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPointSize")]
         public static extern void PointSize(float size);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPolygonOffset")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPolygonOffset")]
         public static extern void PolygonOffset(float factor, float units);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glRotatef")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glRotatef")]
         public static extern void Rotatef(float angle, float x, float y, float z);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glScalef")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glScalef")]
         public static extern void Scalef(float x, float y, float z);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexEnvf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexEnvf")]
         public static extern void TexEnvf(uint target, uint pname, float param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexEnvfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexEnvfv")]
         unsafe public static extern void TexEnvfv(uint target, uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexParameterf")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexParameterf")]
         public static extern void TexParameterf(uint target, uint pname, float param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexParameterfv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexParameterfv")]
         unsafe public static extern void TexParameterfv(uint target, uint pname, float* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTranslatef")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTranslatef")]
         public static extern void Translatef(float x, float y, float z);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glActiveTexture")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glActiveTexture")]
         public static extern void ActiveTexture(uint texture);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glAlphaFuncx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glAlphaFuncx")]
         public static extern void AlphaFuncx(uint func, int @ref);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glBindBuffer")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glBindBuffer")]
         public static extern void BindBuffer(uint target, uint buffer);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glBindTexture")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glBindTexture")]
         public static extern void BindTexture(uint target, uint texture);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glBlendFunc")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glBlendFunc")]
         public static extern void BlendFunc(uint sfactor, uint dfactor);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glBufferData")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glBufferData")]
         public static extern void BufferData(uint target, int size, System.IntPtr data, uint usage);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glBufferSubData")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glBufferSubData")]
         public static extern void BufferSubData(uint target, int offset, int size, System.IntPtr data);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glClear")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glClear")]
         public static extern void Clear(uint mask);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glClearColorx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glClearColorx")]
         public static extern void ClearColorx(int red, int green, int blue, int alpha);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glClearDepthx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glClearDepthx")]
         public static extern void ClearDepthx(int depth);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glClearStencil")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glClearStencil")]
         public static extern void ClearStencil(int s);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glClientActiveTexture")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glClientActiveTexture")]
         public static extern void ClientActiveTexture(uint texture);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glClipPlanex")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glClipPlanex")]
         unsafe public static extern void ClipPlanex(uint plane, int* equation);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glColor4ub")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glColor4ub")]
         public static extern void Color4ub(byte red, byte green, byte blue, byte alpha);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glColor4x")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glColor4x")]
         public static extern void Color4x(int red, int green, int blue, int alpha);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glColorMask")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glColorMask")]
         public static extern void ColorMask(byte red, byte green, byte blue, byte alpha);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glColorPointer")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glColorPointer")]
         public static extern void ColorPointer(int size, uint type, int stride, System.IntPtr pointer);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glCompressedTexImage2D")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glCompressedTexImage2D")]
         public static extern void CompressedTexImage2D(uint target, int level, uint internalformat, int width, int height, int border, int imageSize, System.IntPtr data);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glCompressedTexSubImage2D")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glCompressedTexSubImage2D")]
         public static extern void CompressedTexSubImage2D(uint target, int level, int xoffset, int yoffset, int width, int height, uint format, int imageSize, System.IntPtr data);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glCopyTexImage2D")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glCopyTexImage2D")]
         public static extern void CopyTexImage2D(uint target, int level, uint internalformat, int x, int y, int width, int height, int border);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glCopyTexSubImage2D")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glCopyTexSubImage2D")]
         public static extern void CopyTexSubImage2D(uint target, int level, int xoffset, int yoffset, int x, int y, int width, int height);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glCullFace")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glCullFace")]
         public static extern void CullFace(uint mode);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDeleteBuffers")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDeleteBuffers")]
         unsafe public static extern void DeleteBuffers(int n, uint* buffers);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDeleteTextures")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDeleteTextures")]
         unsafe public static extern void DeleteTextures(int n, uint* textures);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDepthFunc")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDepthFunc")]
         public static extern void DepthFunc(uint func);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDepthMask")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDepthMask")]
         public static extern void DepthMask(byte flag);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDepthRangex")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDepthRangex")]
         public static extern void DepthRangex(int zNear, int zFar);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDisable")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDisable")]
         public static extern void Disable(uint cap);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDisableClientState")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDisableClientState")]
         public static extern void DisableClientState(uint array);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDrawArrays")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDrawArrays")]
         public static extern void DrawArrays(uint mode, int first, int count);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glDrawElements")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glDrawElements")]
         public static extern void DrawElements(uint mode, int count, uint type, System.IntPtr indices);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glEnable")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glEnable")]
         public static extern void Enable(uint cap);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glEnableClientState")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glEnableClientState")]
         public static extern void EnableClientState(uint array);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glFinish")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glFinish")]
         public static extern void Finish();
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glFlush")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glFlush")]
         public static extern void Flush();
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glFogx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glFogx")]
         public static extern void Fogx(uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glFogxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glFogxv")]
         unsafe public static extern void Fogxv(uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glFrontFace")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glFrontFace")]
         public static extern void FrontFace(uint mode);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glFrustumx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glFrustumx")]
         public static extern void Frustumx(int left, int right, int bottom, int top, int zNear, int zFar);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetBooleanv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetBooleanv")]
         public static extern void GetBooleanv(uint pname, System.IntPtr @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetBufferParameteriv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetBufferParameteriv")]
         unsafe public static extern void GetBufferParameteriv(uint target, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGenBuffers")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGenBuffers")]
         unsafe public static extern void GenBuffers(int n, uint* buffers);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGenTextures")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGenTextures")]
         unsafe public static extern void GenTextures(int n, uint* textures);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetError")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetError")]
         public static extern uint GetError();
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetFixedv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetFixedv")]
         unsafe public static extern void GetFixedv(uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetIntegerv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetIntegerv")]
         unsafe public static extern void GetIntegerv(uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetLightxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetLightxv")]
         unsafe public static extern void GetLightxv(uint light, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetMaterialxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetMaterialxv")]
         unsafe public static extern void GetMaterialxv(uint face, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetPointerv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetPointerv")]
         unsafe public static extern void GetPointerv(uint pname, IntPtr* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetString")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetString")]
         public static extern System.IntPtr GetString(uint name);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetTexEnviv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetTexEnviv")]
         unsafe public static extern void GetTexEnviv(uint env, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetTexEnvxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetTexEnvxv")]
         unsafe public static extern void GetTexEnvxv(uint env, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetTexParameteriv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetTexParameteriv")]
         unsafe public static extern void GetTexParameteriv(uint target, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetTexParameterxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetTexParameterxv")]
         unsafe public static extern void GetTexParameterxv(uint target, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glHint")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glHint")]
         public static extern void Hint(uint target, uint mode);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glIsBuffer")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glIsBuffer")]
         public static extern byte IsBuffer(uint buffer);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glIsEnabled")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glIsEnabled")]
         public static extern byte IsEnabled(uint cap);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glIsTexture")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glIsTexture")]
         public static extern byte IsTexture(uint texture);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLightModelx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLightModelx")]
         public static extern void LightModelx(uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLightModelxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLightModelxv")]
         unsafe public static extern void LightModelxv(uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLightx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLightx")]
         public static extern void Lightx(uint light, uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLightxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLightxv")]
         unsafe public static extern void Lightxv(uint light, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLineWidthx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLineWidthx")]
         public static extern void LineWidthx(int width);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLoadIdentity")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLoadIdentity")]
         public static extern void LoadIdentity();
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLoadMatrixx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLoadMatrixx")]
         public static extern void LoadMatrixx(ref int m);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glLogicOp")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glLogicOp")]
         public static extern void LogicOp(uint opcode);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glMaterialx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glMaterialx")]
         public static extern void Materialx(uint face, uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glMaterialxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glMaterialxv")]
         unsafe public static extern void Materialxv(uint face, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glMatrixMode")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glMatrixMode")]
         public static extern void MatrixMode(uint mode);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glMultMatrixx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glMultMatrixx")]
         unsafe public static extern void MultMatrixx(int* m);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glMultiTexCoord4x")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glMultiTexCoord4x")]
         public static extern void MultiTexCoord4x(uint target, int s, int t, int r, int q);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glNormal3x")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glNormal3x")]
         public static extern void Normal3x(int nx, int ny, int nz);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glNormalPointer")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glNormalPointer")]
         public static extern void NormalPointer(uint type, int stride, System.IntPtr pointer);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glOrthox")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glOrthox")]
         public static extern void Orthox(int left, int right, int bottom, int top, int zNear, int zFar);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPixelStorei")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPixelStorei")]
         public static extern void PixelStorei(uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPointParameterx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPointParameterx")]
         public static extern void PointParameterx(uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPointParameterxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPointParameterxv")]
         unsafe public static extern void PointParameterxv(uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPointSizex")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPointSizex")]
         public static extern void PointSizex(int size);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPolygonOffsetx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPolygonOffsetx")]
         public static extern void PolygonOffsetx(int factor, int units);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPopMatrix")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPopMatrix")]
         public static extern void PopMatrix();
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPushMatrix")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPushMatrix")]
         public static extern void PushMatrix();
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glReadPixels")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glReadPixels")]
         public static extern void ReadPixels(int x, int y, int width, int height, uint format, uint type, System.IntPtr pixels);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glRotatex")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glRotatex")]
         public static extern void Rotatex(int angle, int x, int y, int z);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glSampleCoverage")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glSampleCoverage")]
         public static extern void SampleCoverage(float value, byte invert);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glSampleCoveragex")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glSampleCoveragex")]
         public static extern void SampleCoveragex(int value, byte invert);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glScalex")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glScalex")]
         public static extern void Scalex(int x, int y, int z);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glScissor")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glScissor")]
         public static extern void Scissor(int x, int y, int width, int height);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glShadeModel")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glShadeModel")]
         public static extern void ShadeModel(uint mode);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glStencilFunc")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glStencilFunc")]
         public static extern void StencilFunc(uint func, int @ref, uint mask);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glStencilMask")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glStencilMask")]
         public static extern void StencilMask(uint mask);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glStencilOp")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glStencilOp")]
         public static extern void StencilOp(uint fail, uint zfail, uint zpass);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexCoordPointer")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexCoordPointer")]
         public static extern void TexCoordPointer(int size, uint type, int stride, System.IntPtr pointer);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexEnvi")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexEnvi")]
         public static extern void TexEnvi(uint target, uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexEnvx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexEnvx")]
         public static extern void TexEnvx(uint target, uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexEnviv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexEnviv")]
         unsafe public static extern void TexEnviv(uint target, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexEnvxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexEnvxv")]
         unsafe public static extern void TexEnvxv(uint target, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexImage2D")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexImage2D")]
         public static extern void TexImage2D(uint target, int level, uint internalformat, int width, int height, int border, uint format, uint type, System.IntPtr pixels);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexParameteri")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexParameteri")]
         public static extern void TexParameteri(uint target, uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexParameterx")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexParameterx")]
         public static extern void TexParameterx(uint target, uint pname, int param);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexParameteriv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexParameteriv")]
         unsafe public static extern void TexParameteriv(uint target, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexParameterxv")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexParameterxv")]
         unsafe public static extern void TexParameterxv(uint target, uint pname, int* @params);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTexSubImage2D")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTexSubImage2D")]
         public static extern void TexSubImage2D(uint target, int level, int xoffset, int yoffset, int width, int height, uint format, uint type, System.IntPtr pixels);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glTranslatex")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glTranslatex")]
         public static extern void Translatex(int x, int y, int z);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glVertexPointer")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glVertexPointer")]
         public static extern void VertexPointer(int size, uint type, int stride, System.IntPtr pointer);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glViewport")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glViewport")]
         public static extern void Viewport(int x, int y, int width, int height);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glPointSizePointerOES")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glPointSizePointerOES")]
         public static extern void PointSizePointerOES(uint type, int stride, System.IntPtr pointer);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetClipPlanef")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetClipPlanef")]
         unsafe public static extern void GetClipPlanef(uint pname, float* eqn);
 
-        [DllImportAttribute("libgles_cm.dll", EntryPoint = "glGetClipPlanex")]
+        [DllImportAttribute(LIBGLES_CM, EntryPoint = "glGetClipPlanex")]
         unsafe public static extern void GetClipPlanex(uint pname, int* eqn);
     }
 }
